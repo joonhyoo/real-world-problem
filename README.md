@@ -1,16 +1,40 @@
-# React + Vite
+# Real-World-Problem
+A simple, dockerised contacts app created with React, Tailwind and Vite. 
+This guide will walk you through installation and running the app on your machine.
+## Features
+* **Contact Info Display:** Shows details of the selected contact.
+* **Searchable Contacts:** Find contacts using the search bar.
+* **Responsive Design:** Optimized for both mobile and desktop.
+## Prerequisites
+* Docker: Ensure you have Docker installed on your machine. You can check if Docker is installed by running:
+```
+docker --version
+```
+* Git: You'll need git installed if you want to clone the source code from this repository. You can check if Git is installed by running:
+```
+git --version
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+### 1. Clone the git repo
+```
+git clone https://github.com/joonhyoo/real-world-problem.git
+```
+### 2. Build and run the app with Docker Compose
+Navigate to the project repo:
+```
+cd real-world-problem
+```
+Build the Docker image and start up the application:
+```
+docker compose up --build -d
+```
+> [!TIP]
+> The `--build flag` ensures Docker rebuilds the image, while the `-d` flag runs the container in detached mode, allowing you to keep using your terminal.
+### 3. Open the app in your web browser
+The app should be available on `http://localhost:3000`
+### 4. Stop the app with Docker Compose
+When you're done using the application, stop the app:
+```
+docker compose down
+```
