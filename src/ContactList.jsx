@@ -62,9 +62,7 @@ function ContactList({ users, userId }) {
           <button
             key={user.id}
             onClick={() => setSearchParams({ userId: user.id })}
-            className={
-              "cursor-pointer hover:brightness-90 w-full text-left bg-white duration-150 ease-in-out truncate text-ellipsis"
-            }
+            className={`cursor-pointer hover:brightness-90 w-full text-left bg-white duration-150 ease-in-out truncate text-ellipsis ${String(user.id) === userId ? "text-blue-600 font-semibold" : ""}`}
           >
             <div className="py-2 mx-4 border-b border-gray-200">
               {user.name}
